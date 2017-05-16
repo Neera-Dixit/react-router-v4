@@ -71,7 +71,7 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ['.js', '.es6', '.jsx','.scss','.css']
+        extensions: ['.js', '.es6', '.jsx','.scss','.css','.json']
     }
 
 }

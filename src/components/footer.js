@@ -8,7 +8,7 @@ export default class Footer extends Component {
     render(){
         return (
             <div id="footer">
-                <label>Footer</label>
+                <label>&copy; All rights reserved</label>
             </div>  
         );
     }

@@ -8,7 +8,7 @@ export default class Header extends Component {
     render(){
         return (
             <div id="header">
-                <label>Header</label>
+                <label> AMT</label>
             </div>  
         );
     }
