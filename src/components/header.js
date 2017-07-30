@@ -8,9 +8,11 @@ import {
     Route,
     Link,
     NavLink,
-    Redirect
+    Redirect,
+    Switch
 } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
+import NotFound from './notfound';
 
 const history = createBrowserHistory();
 
@@ -42,14 +44,19 @@ export default class Header extends Component {
                                    <ul className="nav navbar-nav">
                                        <li><NavLink exact activeClassName="selected" to="/">Home</NavLink></li>
                                        <li><NavLink activeClassName="selected" to="/submit">Submit Recepie</NavLink></li>
+                                       <li><NavLink activeClassName="selected" to="/submitdata">redirect</NavLink></li>
                                    </ul>
 
                                </div>
                            </div>
                        </nav>
 
-                       <Route exact path="/" component={Home}/>
-                       <Route path="/submit" component={Submit}/>
+                       <Switch>
+                            <Route exact path="/" component={Home}/>
+                            <Redirect from="/submitdata" to="/"/>
+                            <Route path="/submit" component={Submit}/>
+                            <Route component={NotFound}/>
+                       </Switch>
                    </div>
                </Router>
         )

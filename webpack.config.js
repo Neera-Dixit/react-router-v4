@@ -7,7 +7,7 @@ module.exports = {
 
     context: path.resolve('src'),
 
-    entry: ["./app.js"],
+    entry: ["./index.js"],
 
     output: {
         path: path.resolve('public'),
